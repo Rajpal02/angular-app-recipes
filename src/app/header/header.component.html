@@ -1,0 +1,58 @@
+<!-- <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" class="navbar-brand">Recipe-Book</a>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Recipe</a></li>
+        <li><a href="#">Shopping-List</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <ul class="dropdown-menu">
+            <li><a href="#">Save Data</a></li>
+            <li><a href="#">Fetch Data</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+<p>
+  <mat-toolbar color="primary">
+    <button mat-icon-button [matMenuTriggerFor]="mainmenu" aria-label="Main Menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #mainmenu="matMenu">
+      <a href="#" (click)="onSelect('recipe')">
+      <button mat-menu-item>
+        <mat-icon>fastfood</mat-icon>
+        <span>Recipe</span>
+      </button>
+    </a>
+    <a href="#" (click)="onSelect('shopping-list')">
+      <button mat-menu-item>
+        <mat-icon>shopping_cart</mat-icon>
+        <span>Shopping-List</span>
+      </button>
+    </a>
+    </mat-menu>
+    <span>Recipe-Book</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="sidemenu" aria-label="Side Menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #sidemenu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>save</mat-icon>
+        <span>Save Data</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>get_app</mat-icon>
+        <span>Fetch Data</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar>
+</p>
